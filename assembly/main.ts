@@ -1,5 +1,5 @@
 //@nearfile out
-import { context, storage, ContractPromise, near, logging } from "near-runtime-ts";
+import { context, storage, ContractPromise, logging } from "near-runtime-ts";
 
 import { PromiseArgs, InputPromiseArgs, MyCallbackResult, MyContractPromiseResult } from "./model";
 
@@ -145,7 +145,7 @@ export function callPromise(args: PromiseArgs): void {
   let promise = ContractPromise.create(
       args.receiver,
       args.methodName,
-      inputArgs.encode().serialize(),
+      inputArgs.encode(),
       args.gas,
       new u128(args.balance));
   if (args.callback) {
@@ -155,7 +155,7 @@ export function callPromise(args: PromiseArgs): void {
     promise = promise.then(
         context.contractName,
         args.callback,
-        inputArgs.encode().serialize(),
+        inputArgs.encode(),
         args.callbackGas,
         new u128(callbackBalance)
     );
@@ -170,14 +170,14 @@ export function callPromiseAll(args: PromiseArgs): void {
   let promise = ContractPromise.create(
       args.receiver,
       args.methodName,
-      inputArgs.encode().serialize(),
+      inputArgs.encode(),
       args.gas,
       new u128(args.balance));
 
    let promise2 = ContractPromise.create(
       args.receiver,
       args.methodName,
-      inputArgs.encode().serialize(),
+      inputArgs.encode(),
       args.gas,
       new u128(args.balance));
 
@@ -186,14 +186,14 @@ export function callPromiseAll(args: PromiseArgs): void {
   promise = promise.then(
       context.contractName,
       args.callback,
-      inputArgs.encode().serialize(),
+      inputArgs.encode(),
       args.callbackGas,
       new u128(args.callbackBalance as u64));
 }
 
 export function callbackWithName(args: PromiseArgs): MyCallbackResult {
   let contractResults = ContractPromise.getResults();
-  let allRes = Array.create<MyContractPromiseResult>(contractResults.length);
+  let allRes = new Array<MyContractPromiseResult>(contractResults.length);
   for (let i = 0; i < contractResults.length; ++i) {
     allRes[i] = new MyContractPromiseResult();
     allRes[i].ok = (contractResults[i].status == 1);
@@ -205,7 +205,7 @@ export function callbackWithName(args: PromiseArgs): MyCallbackResult {
     rs: allRes,
     n: context.contractName,
   };
-  let bytes = result.encode().serialize();
+  let bytes = result.encode();
   storage.setBytes("lastResult", bytes);
   return result;
 }

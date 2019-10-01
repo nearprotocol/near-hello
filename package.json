@@ -2,8 +2,8 @@
     "name": "hello-wasm",
     "version": "0.1.0",
     "dependencies": {
-        "assemblyscript-json": "github:nearprotocol/assemblyscript-json#staging",
-        "near-runtime-ts": "github:nearprotocol/near-runtime-ts#staging"
+        "assemblyscript-json": "^0.2.0",
+        "near-runtime-ts": "^0.3.1"
     },
     "scripts": {
         "build": "mkdir -p ./out/assembly && gulp"
@@ -11,6 +11,6 @@
     "devDependencies": {
         "bignum": "github:MaxGraey/bignum.wasm",
         "gulp": "^4.0.2",
-        "near-shell": "github:nearprotocol/near-shell#staging"
+        "near-shell": "^0.11.0"
     }
 }
