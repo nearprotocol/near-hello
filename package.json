@@ -1,5 +1,5 @@
 {
-    "name": "hello-wasm",
+    "name": "near-hello",
     "version": "0.1.0",
     "dependencies": {
         "assemblyscript-json": "^0.2.0",
