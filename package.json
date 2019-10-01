@@ -6,7 +6,7 @@
         "near-runtime-ts": "^0.3.1"
     },
     "files": [
-        "dist/hello.wasm"
+        "dist/main.wasm"
     ],
     "scripts": {
         "build": "mkdir -p ./dist/assembly && gulp",
