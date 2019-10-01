@@ -1,0 +1,14 @@
+image: node:latest
+
+stages:
+  - build
+
+cache:
+  paths:
+    - node_modules/
+
+run_tests:
+  stage: build
+  script:
+    - yarn
+    - yarn build
