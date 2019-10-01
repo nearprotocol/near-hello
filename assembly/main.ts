@@ -1,4 +1,4 @@
-//@nearfile out
+// @nearfile dist
 import { context, storage, ContractPromise, logging } from "near-runtime-ts";
 
 import { PromiseArgs, InputPromiseArgs, MyCallbackResult, MyContractPromiseResult } from "./model";
