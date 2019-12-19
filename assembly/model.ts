@@ -3,12 +3,12 @@ export class PromiseArgs {
     receiver: string;
     methodName: string;
     args: PromiseArgs;
-    gas: i32;
-    balance: i32;
+    gas: u64;
+    balance: u64;
     callback: string;
     callbackArgs: PromiseArgs;
-    callbackBalance: i32;
-    callbackGas: i32;
+    callbackBalance: u64;
+    callbackGas: u64;
 }
 
 export class InputPromiseArgs {
