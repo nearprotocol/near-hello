@@ -5,16 +5,15 @@
         "dist/main.wasm"
     ],
     "scripts": {
-        "build": "mkdir -p ./dist/assembly && gulp",
+        "build": "node asconfig.js",
         "prepublish": "not-in-install && yarn build || in-install"
     },
     "types": "assembly/index.ts",
     "devDependencies": {
-        "gulp": "^4.0.2",
+        "assemblyscript": "^0.8.1",
         "in-publish": "^2.0.0",
-        "near-shell": "^0.11.0",
-        "assemblyscript": "^0.8.0",
+        "near-bindgen-as": "^1.0.1",
         "near-runtime-ts": "^0.3.1",
-        "near-bindgen-as": "github:nearprotocol/near-bindgen-as#v1.1.0"
+        "near-shell": "^0.11.0"
     }
 }
