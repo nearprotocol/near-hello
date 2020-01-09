@@ -52,6 +52,7 @@ export function benchmark_storage(n: i32): string {
   i = 0;
   let sum: u64 = 0;
   while (i < n) {
+    //@ts-ignore result of getString is nonNull
     let item = I32.parseInt(storage.getString(i.toString()));
     sum += item;
     i += 1;
@@ -198,7 +199,7 @@ export function callbackWithName(args: PromiseArgs): MyCallbackResult {
     allRes[i] = new MyContractPromiseResult();
     allRes[i].ok = (contractResults[i].status == 1);
     if (allRes[i].ok && contractResults[i].buffer != null && contractResults[i].buffer.length > 0) {
-      allRes[i].r = MyCallbackResult.decode(contractResults[i].buffer);
+      allRes[i].r = decode<MyCallbackResult>(contractResults[i].buffer);
     }
   }
   let result: MyCallbackResult = {
@@ -211,5 +212,5 @@ export function callbackWithName(args: PromiseArgs): MyCallbackResult {
 }
 
 export function getLastResult(): MyCallbackResult {
-  return MyCallbackResult.decode(storage.getBytes("lastResult"));
+  return decode<MyCallbackResult>(storage.getBytes("lastResult"));
 }
