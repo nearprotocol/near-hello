@@ -1,10 +1,7 @@
 {
     "name": "near-hello",
     "version": "0.4.0",
-    "dependencies": {
-        "assemblyscript-json": "^0.2.0",
-        "near-runtime-ts": "^0.5.1"
-    },
+    "dependencies": {},
     "files": [
         "dist/main.wasm"
     ],
@@ -17,7 +14,7 @@
         "assemblyscript": "^0.8.1",
         "in-publish": "^2.0.0",
         "near-bindgen-as": "^1.1.1",
-        "near-runtime-ts": "^0.3.1",
+        "near-runtime-ts": "^0.6.1",
         "near-shell": "^0.18.0"
     }
 }
