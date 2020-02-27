@@ -1,9 +1,8 @@
 // @nearfile dist
-import { context, storage, ContractPromise, logging } from "near-runtime-ts";
+import { context, storage, ContractPromise, logging, u128 } from "near-runtime-ts";
 
 import { PromiseArgs, InputPromiseArgs, MyCallbackResult, MyContractPromiseResult } from "./model";
 
-import { u128 } from "bignum";
 
 export function hello(name: string): string {
 

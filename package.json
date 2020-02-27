@@ -13,8 +13,8 @@
     "devDependencies": {
         "assemblyscript": "^0.8.1",
         "in-publish": "^2.0.0",
-        "near-bindgen-as": "^1.1.1",
-        "near-runtime-ts": "^0.6.1",
+        "near-bindgen-as": "^1.2.3",
+        "near-runtime-ts": "^0.6.2",
         "near-shell": "^0.18.0"
     }
 }
