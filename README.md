@@ -1,5 +1,5 @@
 # near-hello
-[near hello](https://github.com/nearprotocol/token-contract-as)| [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nearprotocol/near-hello)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/nearprotocol/near-hello)
 
 [![Build Status](https://travis-ci.com/nearprotocol/near-hello.svg?branch=master)](https://travis-ci.com/nearprotocol/near-hello)
 
