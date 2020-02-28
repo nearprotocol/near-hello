@@ -1,9 +1,8 @@
-// @nearfile dist
-import { context, storage, ContractPromise, logging } from "near-runtime-ts";
+// @nearfile
+import { context, storage, ContractPromise, logging, u128 } from "near-runtime-ts";
 
 import { PromiseArgs, InputPromiseArgs, MyCallbackResult, MyContractPromiseResult } from "./model";
 
-import { u128 } from "bignum";
 
 export function hello(name: string): string {
 
@@ -53,7 +52,7 @@ export function benchmark_storage(n: i32): string {
   let sum: u64 = 0;
   while (i < n) {
     //@ts-ignore result of getString is nonNull
-    let item = I32.parseInt(storage.getString(i.toString()));
+    let item = I32.parseInt(storage.getString(i.toString())!);
     sum += item;
     i += 1;
   }
@@ -212,5 +211,5 @@ export function callbackWithName(args: PromiseArgs): MyCallbackResult {
 }
 
 export function getLastResult(): MyCallbackResult {
-  return decode<MyCallbackResult>(storage.getBytes("lastResult"));
+  return decode<MyCallbackResult>(storage.getBytes("lastResult")!);
 }
