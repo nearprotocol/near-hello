@@ -382,9 +382,9 @@ array-unique@^0.3.2:
   integrity sha1-qJS3XUvE9s1nnvMkSp/Y9Gri1Cg=
 
 as-bignum@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/as-bignum/-/as-bignum-0.1.5.tgz#e97a46a175644c277ecfe17d3850a63b6e55ac44"
-  integrity sha512-lv0ZOxtBReuCq6wpXUtjm6Mrj7CQn+qdSgF/O7yh553aH4FRrRaUXp/ywfSNMoiPK7AJ47f9gcKs0Toi5H84iA==
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/as-bignum/-/as-bignum-0.1.6.tgz#014c14c4027359ced10ac35225cbeed4778ef621"
+  integrity sha512-PiQwgChwyTogru0Z0kR7xvxcenLVgpa7d8UOrIqG9Ea91kcKfAo/SVc4gWjaPQJUl+xINekofxBzlj3tIeX18A==
 
 assemblyscript-json@^0.3.0:
   version "0.3.0"
@@ -1739,16 +1739,6 @@ ncp@^2.0.0:
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-2.0.0.tgz#195a21d6c46e361d2fb1281ba38b91e9df7bdbb3"
   integrity sha1-GVoh1sRuNh0vsSgbo4uR6d9727M=
 
-near-as-sdk@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/near-as-sdk/-/near-as-sdk-0.1.0.tgz#37e274e8fc9257ef57ce069d5ea54adcf98f5a17"
-  integrity sha512-JfwDf9EyExvMF7sIhon3zBzLEKfB3CVJ68DYQtiL2mKLAZGWO+RyRif/UVtffrXzadmlnJk38YzOBHFkpedbBw==
-  dependencies:
-    "@as-pect/cli" "^3.0.0-beta.0"
-    near-bindgen-as "^1.3.0-0"
-    near-runtime-ts "^0.7.0-0"
-    wasm-mock-vm nearprotocol/wasm-mock-vm
-
 near-assemblyscript@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/near-assemblyscript/-/near-assemblyscript-0.7.4.tgz#73b26bfa0e361701ff6e0f43e64c3f02a554da99"
@@ -1775,6 +1765,16 @@ near-runtime-ts@^0.7.0-0:
   dependencies:
     as-bignum "^0.1.5"
     assemblyscript-json "^0.3.0"
+
+near-sdk-as@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.0.2.tgz#d24d242e63ff33155e67b3ca92df352cc98eba28"
+  integrity sha512-63OIc0aylptQrPgH7DghVIeGx5v144QJOE/zto9JCLuhYVFWQ6dghvPn5mdsWgiRnpkBw+zQ/ptJ+35bqtfyfA==
+  dependencies:
+    "@as-pect/cli" "^3.0.0-beta.0"
+    near-bindgen-as "^1.3.0-0"
+    near-runtime-ts "^0.7.0-0"
+    wasm-mock-vm "^1.2.1"
 
 near-shell@^0.18.0:
   version "0.18.0"
@@ -2640,9 +2640,10 @@ walker@^1.0.7, walker@~1.0.5:
   dependencies:
     makeerror "1.0.x"
 
-wasm-mock-vm@nearprotocol/wasm-mock-vm:
-  version "1.2.0"
-  resolved "https://codeload.github.com/nearprotocol/wasm-mock-vm/tar.gz/19c1db03f950e4cdc0b0917ba869397835fc7045"
+wasm-mock-vm@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/wasm-mock-vm/-/wasm-mock-vm-1.2.1.tgz#a2f8c7b5f3ffe977e9c2a3ee3dd43c76ce4f243c"
+  integrity sha512-ksmOWAFxn8zts/xjyPWX7j2yILVjSW7NFbwzJxs6nrkooRV6xWg8PCV8UN+Nza9jjazTGFOzcs1ljyPa3IapWw==
 
 which-module@^2.0.0:
   version "2.0.0"

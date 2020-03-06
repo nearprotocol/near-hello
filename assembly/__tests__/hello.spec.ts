@@ -4,7 +4,7 @@ import { storage } from "near-runtime-ts";
 
 describe("logs", () => {
   it("should be added", () => {
-    generateLogs(); // adds "item" => "vaule" to storage
+    generateLogs(); // adds "item" => "value" to storage
     const logs = VM.outcome().logs;
     expect(logs).toIncludeEqual("log1");
     expect(logs).toIncludeEqual("log2");
