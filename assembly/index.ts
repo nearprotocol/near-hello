@@ -26,22 +26,6 @@ export function getValue(): string {
   return storage.getString("name")!;
 }
 
-export function getAllKeys(): string[] {
-  let keys = storage.keys("n");
-  assert(keys.length == 1);
-  assert(keys[0] == "name");
-  return keys;
-}
-
-export function benchmark(): string[] {
-  let i = 0;
-  while (i < 10) {
-    storage.setString(i.toString(), "123123");
-    i += 1;
-  }
-  return storage.keys("");
-}
-
 export function benchmark_storage(n: i32): string {
   let i = 0;
   while (i < n) {
