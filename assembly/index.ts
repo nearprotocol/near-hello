@@ -1,5 +1,4 @@
-// @nearfile
-import { context, storage, ContractPromise, logging, u128 } from "near-runtime-ts";
+import { context, storage, ContractPromise, logging, u128 } from "near-sdk-as";
 
 import { PromiseArgs, InputPromiseArgs, MyCallbackResult, MyContractPromiseResult } from "./model";
 
@@ -196,4 +195,31 @@ export function callbackWithName(args: PromiseArgs): MyCallbackResult {
 
 export function getLastResult(): MyCallbackResult {
   return decode<MyCallbackResult>(storage.getBytes("lastResult")!);
+}
+
+export function crossContract(): void {
+  let promise = ContractPromise.create(
+      context.contractName,               // contract account name
+      "crossContractFailure",       // contract method name
+      new Uint8Array(0),           // serialized contract method arguments encoded as Uint8Array
+      400000000000000,                      // gas attached to the call
+      u128.Zero                           // attached deposit to be sent with the call
+  )
+
+  logging.log(context.contractName)
+
+  let callbackPromise = promise.then(
+      context.contractName,
+      "triggerAssert",
+      new Uint8Array(0),
+      200000000000000,
+      u128.Zero
+  );
+
+  callbackPromise.returnAsResult();
+}
+
+export function crossContractFailure(): void {
+  logging.log("log before planned panic");
+  panic();
 }
