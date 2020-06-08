@@ -1,4 +1,4 @@
-const compile = require("near-bindgen-as/compiler").compile
+const compile = require("near-sdk-as/compiler").compile
 
 compile("assembly/index.ts", // input file
         "dist/main.wasm",    // output file

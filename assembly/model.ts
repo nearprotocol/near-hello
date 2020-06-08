@@ -1,4 +1,4 @@
-// @nearfile dist
+@nearBindgen
 export class PromiseArgs {
     receiver: string;
     methodName: string;
@@ -11,15 +11,18 @@ export class PromiseArgs {
     callbackGas: u64;
 }
 
+@nearBindgen
 export class InputPromiseArgs {
     args: PromiseArgs;
 }
 
+@nearBindgen
 export class MyContractPromiseResult {
     ok: bool;
     r: MyCallbackResult;
-  }
+}
 
+@nearBindgen
 export class MyCallbackResult {
     rs: MyContractPromiseResult[];
     n: string;
