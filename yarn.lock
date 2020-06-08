@@ -313,10 +313,18 @@ ascii-table@0.0.9:
   resolved "https://registry.yarnpkg.com/ascii-table/-/ascii-table-0.0.9.tgz#06a6604d6a55d4bf41a9a47d9872d7a78da31e73"
   integrity sha1-BqZgTWpV1L9BqaR9mHLXp42jHnM=
 
-assemblyscript-json@^0.3.0:
+assemblyscript-json@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/assemblyscript-json/-/assemblyscript-json-0.3.1.tgz#bd6053eba21cd29bef2fee5c8dfc6392401c97cf"
   integrity sha512-RScAzu/PUejojfXgZnAfy9FUkePSh/zIs3eAaFPWpiBQjS8eWc8aOdM2Q68TI6D7AybyJAK8G3iVF7Qd2Uakcw==
+
+assemblyscript@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.10.0.tgz#0d2a0591be77fdd294d720172e307e526a559ba8"
+  integrity sha512-ErUNhHboD+zsB4oG6X1YICDAIo27Gq7LeNX6jVe+Q0W5cI51/fHwC8yJ68IukqvupmZgYPdp1JqqRXlS+BrUfA==
+  dependencies:
+    binaryen "93.0.0-nightly.20200514"
+    long "^4.0.0"
 
 assemblyscript@^0.9.4:
   version "0.9.4"
@@ -366,6 +374,11 @@ binaryen@91.0.0-nightly.20200310:
   version "91.0.0-nightly.20200310"
   resolved "https://registry.yarnpkg.com/binaryen/-/binaryen-91.0.0-nightly.20200310.tgz#f2c60020fef1fb5ac0e436b9a0e01b25c484c0b4"
   integrity sha512-MmDzq267aa61HdEQeYiz+7guJlsYk2/6NxWC8I4w1jijqDwoqyZZxi7UYnTH7QvfLrNdMjweEgfT7FHjkvkPmQ==
+
+binaryen@93.0.0-nightly.20200514:
+  version "93.0.0-nightly.20200514"
+  resolved "https://registry.yarnpkg.com/binaryen/-/binaryen-93.0.0-nightly.20200514.tgz#af498b5d9f8169254fb0cd385061d94ba9b27b1d"
+  integrity sha512-SRRItmNvhRVfoWWbRloO4i8IqkKH8rZ7/0QWRgLpM3umupK8gBpo9MY7Zp3pDysRSp+rVoqxvM5x4tFyCSa9zw==
 
 bindings@^1.4.0, bindings@^1.5.0:
   version "1.5.0"
@@ -1315,14 +1328,15 @@ near-mock-vm@^0.1.0:
     js-base64 "^2.5.2"
     yargs "^15.3.1"
 
-near-sdk-as@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.3.4.tgz#3ca36fd2a10267bddecf0ca895fb6f3799b06612"
-  integrity sha512-LkXXBKzEb0wJcgJv/Rb3cvQQDTSmICwMIoZJIG7mgetTEpOXGOJEd0Q41fpK3oed1o/0P1vNt4Kj9Cxt9d2pgg==
+near-sdk-as@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/near-sdk-as/-/near-sdk-as-0.4.0.tgz#a28e71a5b2818db8a5577e9f761823334f481c62"
+  integrity sha512-MTZRrsReZQsv9LA2bvzmZYfqTWyYr1yE0LpM6hk47bVzNtOT85VKdB7XcU0dty3E7AbUUVWoS7DUFAIg89AP+g==
   dependencies:
     "@as-pect/cli" "^3.2.6"
     as-bignum "^0.1.5"
-    assemblyscript-json "^0.3.0"
+    assemblyscript "^0.10.0"
+    assemblyscript-json "^0.3.1"
     bn.js "^5.1.1"
     bs58 "^4.0.1"
     js-base64 "^2.5.2"
