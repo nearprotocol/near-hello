@@ -326,10 +326,10 @@ assemblyscript@0.10.0:
     binaryen "93.0.0-nightly.20200514"
     long "^4.0.0"
 
-assemblyscript@^0.12.3:
-  version "0.12.3"
-  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.12.3.tgz#f705dd0101ddeb40088d9ec3f9c2f20fe88d74eb"
-  integrity sha512-cdIbbP1Xoduw5nt3C7o2jYTQCrcPAnqoASgBMmOOcf/UY4k+xYJbV5eHwMwVSKZXAI74PUSwfxYjLF7L7CWA9g==
+assemblyscript@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/assemblyscript/-/assemblyscript-0.13.0.tgz#41c1b515e0f59dfd7d1ece495703701b583b57d3"
+  integrity sha512-RH2p9yXt3FFo5oEU5097Lsql41RZeE2W9rfFAJTrvlvadLmq1hgeisPcEyLcN/SCReQG5aHbcXt711y7FPV/9g==
   dependencies:
     binaryen "93.0.0-nightly.20200609"
     long "^4.0.0"
