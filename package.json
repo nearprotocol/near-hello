@@ -13,7 +13,7 @@
     "types": "assembly/index.ts",
     "devDependencies": {
         "in-publish": "^2.0.1",
-        "near-sdk-as": "^0.4.2",
+        "near-sdk-as": "^3.0.0",
         "near-cli": "^1.0.1"
     }
 }
